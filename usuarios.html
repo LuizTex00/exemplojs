@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários de Teste via REST</title>
+    <!-- Inclua a folha de estilos do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container bg-warning">
+    <h1>Usuários de Teste via REST</h1>
+
+    <p class="text-white">Os usuários deste exemplo são fornecidos pela API de testes reqres.in</p>
+
+    <div id="usuarios" class="container-fluid">
+        <div class="row">
+            <div v-for="(user, index) in users" :key="index" class="col-md-4 mb-3">
+                <div class="card p-2">
+                    <img :src="user.avatar" class="card-img-top" alt="Imagem do Usuário">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+                        <p class="card-text">{{user.email}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="vue.js"></script>
+</html>
